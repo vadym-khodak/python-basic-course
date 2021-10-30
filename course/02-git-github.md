@@ -96,6 +96,9 @@ echo ".idea" >> ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 ```
 
+## Корисні посилання
+- [Git - Lecture 1 - CS50's Web Programming with Python and JavaScript 2020](https://youtu.be/NcoBAfJ6l2Q) - English
+- 
 
 ## Домашнє завдання:
 1. Клонувати цей репозиторій
