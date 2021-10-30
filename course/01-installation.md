@@ -1,6 +1,7 @@
 # Встановлення Python
 
-## Встановлення Python на macOS
+## Встановлення віртуального оточення
+### Встановлення pyenv на macOS
 
 - відкрити `Terminal`:
   - натиснути`Command + Space`
@@ -8,12 +9,6 @@
   - вибрати зі списку `Terminal`
   ![Find Terminal](images/find_terminal.png)
 
-- перевірити поточну версію Python в Terminal
-    ```bash
-    python --version
-    ```
-
-### Встановлення віртуального оточення
 - встановлення `pyenv`
     ```bash
     brew install pyenv
@@ -23,6 +18,40 @@
     brew install pyenv-virtualenv
     ```
 
+## Встановлення pyenv на Linux
+- відкрити `Terminal` використовуючи комбінацію клавіш `Ctrl-Alt+T`
+
+- оновлення `apt`
+  ```bash
+  sudo apt update
+  ```
+  
+- встановлення необхідних залежностей OS
+  ```bash
+  sudo apt-get install git python3-pip make build-essential \
+  libedit-dev libncurses5-dev libssl-dev zlib1g-dev libbz2-dev \
+  libreadline-dev libsqlite3-dev curl
+  ```
+
+- встановлення `pyenv`
+  ```bash
+  curl https://pyenv.run | bash
+  ```
+  
+- оновлення конфігурації у `.bashrc` файлі
+  ```bash
+  echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+  echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+  echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+  echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+  ```
+  
+- перезапуск термінала
+  ```bash
+  exec $SHELL
+  ```
+
+### Робота з `pyenv`
 - встановлення необхідної версії Python в `pyenv`
     ```bash
     pyenv install <necessary python version> 
@@ -50,14 +79,15 @@
     source ~/.bashrc
     ```
 
+
 - активація віртуального оточення використовуючи `pyenv`
     ```bash
     pyenv activate <virtualenv name>
     ```
-
-- деактивація віртуального оточення використовуючи `pyenv`
+- 
+- перевірка поточної версії Python в Terminal
     ```bash
-    pyenv deactivate 
+    python --version
     ```
 
 - запуск інтерпретатора Python в інтерактивному режимі
@@ -66,23 +96,20 @@
     ```
 
 - закриття інтерпретатора Python в інтерактивному режимі
-`Control + D`
+  `Control + D`
 
 - запуск файла Python в Terminal
     ```bash
     python <path to python file>  # ~/Desktop/hello.py
     ```
 
-## Встановлення Python на Linux
-```bash
-sudo apt update
-sudo apt-get install git python3-pip make build-essential \
-libedit-dev libncurses5-dev libssl-dev zlib1g-dev libbz2-dev \
-libreadline-dev libsqlite3-dev curl
-curl https://pyenv.run | bash
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(pyenv init -)"' >> ~/.bashrc
-echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
-exec $SHELL
-```
+- деактивація віртуального оточення використовуючи `pyenv`
+    ```bash
+    pyenv deactivate 
+    ```
+
+
+- перевірити поточну версію Python в Terminal
+    ```bash
+    python --version
+    ```
