@@ -74,3 +74,15 @@
     ```
 
 ## Встановлення Python на Linux
+```bash
+sudo apt update
+sudo apt-get install git python3-pip make build-essential \
+libedit-dev libncurses5-dev libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev curl
+curl https://pyenv.run | bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+exec $SHELL
+```
