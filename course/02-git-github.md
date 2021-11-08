@@ -1,5 +1,11 @@
 # Git / GitHUb
 
+## Конфігурація глобальних налаштувань користувача
+```bash
+git config --global user.name "<YOUR USER NAME>"
+git config --global user.email "<YOUR@EMAIL>COM>"
+```
+
 ## Список популярних команд що використовуються у різних ситуаціях (використовуйте `git help`):
 
 ### Створення робочого простору:
@@ -73,12 +79,6 @@ collaborate (see also: git help workflows)
     git push -u origin master
     ```
 
-## Конфігурація глобальних налаштувань користувача
-```bash
-git config --global user.name "<YOUR USER NAME>"
-git config --global user.email "<YOUR@EMAIL>COM>"
-```
-
 ## Створення нового репозиторія використовуючи термінал
 ```bash
 echo "# My New Repository" >> README.md
@@ -98,9 +98,13 @@ git config --global core.excludesfile ~/.gitignore_global
 
 ## Корисні посилання
 - [Git - Lecture 1 - CS50's Web Programming with Python and JavaScript 2020](https://youtu.be/NcoBAfJ6l2Q) - English
-- 
+- [Створити GitHub repo](https://docs.github.com/en/get-started/quickstart/create-a-repo)
+- [Про Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+- [Створення Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+
 
 ## Домашнє завдання:
+### Звичайний рівень
 1. Клонувати цей репозиторій
 2. Створити новий репозиторій локально
 3. Додати в репозиторій `.gitgnore`
@@ -109,5 +113,10 @@ git config --global core.excludesfile ~/.gitignore_global
 6. Створити репозиторій в GitHub
 7. Зв'язати локальний репозиторій з репозиторієм в GitHub
 8. Оновити віддалений репозиторій 
+9. Надати користувачу `vadym-khodak` доступ до Вашого GitHub репозиторія
 
-> **Advance:** Зробити оновлення віддаленого репозиторія використовуючи GitHub Pull Request.
+### Advance: Зробити оновлення віддаленого репозиторія використовуючи GitHub Pull Request.
+1. Додати в локальний репозиторій файл main.py
+2. Зробити Pull Request у GitHub для оновлення віддаленого репозиторія.
+3. Відправити користувачу vadym-khodak запит на перевірку цього Pull Request
+4. Залишити коментар до Pull Request у якому позначити користувача vadym-khodak
