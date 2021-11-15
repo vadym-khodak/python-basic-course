@@ -18,7 +18,7 @@
     brew install pyenv-virtualenv
     ```
 
-## Встановлення pyenv на Linux
+### Встановлення pyenv на Linux
 - відкрити `Terminal` використовуючи комбінацію клавіш `Ctrl-Alt+T`
 
 - оновлення `apt`
@@ -50,6 +50,28 @@
   ```bash
   exec $SHELL
   ```
+
+### Windows
+```powershell
+Set-ExecutionPolicy RemoteSigned
+Set-ExecutionPolicy Restricted
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+py -m pip install pyenv-win
+pyenv
+pyenv install --list
+pyenv install 3.9.6
+pyenv versions
+pip install virtualenv
+python -m venv env
+.\env\Scripts\activate
+deactivate
+```
+
+```
+C:\Users\User\.pyenv\pyenv-win\bin
+C:\Users\User\.pyenv\pyenv-win\shims
+C:\Users\User\AppData\Local\Programs\Python\Python310\Scrypts
+```
 
 ### Робота з `pyenv`
 - встановлення необхідної версії Python в `pyenv`
