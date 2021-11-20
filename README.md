@@ -1,3 +1,3 @@
 
 # python-basic-course
-## Additional material
+## Додаткові матеріали
