@@ -9,6 +9,10 @@
   - вибрати зі списку `Terminal`
   ![Find Terminal](images/find_terminal.png)
 
+- встановлення `brew`
+    ```bash
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ```
 - встановлення `pyenv`
     ```bash
     brew install pyenv
@@ -52,11 +56,21 @@
   ```
 
 ### Windows
+- запустити наступні команди у PowerShell
 ```powershell
 Set-ExecutionPolicy RemoteSigned
 Set-ExecutionPolicy Restricted
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 py -m pip install pyenv-win
+```
+- додади наступні шляхи до змінних оточення
+```
+C:\Users\User\.pyenv\pyenv-win\bin
+C:\Users\User\.pyenv\pyenv-win\shims
+C:\Users\User\AppData\Local\Programs\Python\Python310\Scrypts
+```
+#### Робота з `pyenv-win`
+```powershell
 pyenv
 pyenv install --list
 pyenv install 3.9.6
@@ -65,12 +79,6 @@ pip install virtualenv
 python -m venv env
 .\env\Scripts\activate
 deactivate
-```
-
-```
-C:\Users\User\.pyenv\pyenv-win\bin
-C:\Users\User\.pyenv\pyenv-win\shims
-C:\Users\User\AppData\Local\Programs\Python\Python310\Scrypts
 ```
 
 ### Робота з `pyenv`
