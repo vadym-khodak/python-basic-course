@@ -104,6 +104,12 @@ print(chars)
 
 
 # tuple
-
+user_statuses = ("active", "inactive", "pending")
+new_user_statuses = "active", "inactive", "pending"
+statuses = ["active", "inactive", "pending"]
+new_statuses = tuple(statuses)
 
 # set
+users = {"bob", "bill", "max"}
+users_new = ["bob", "bill", "max", "bob"]
+unique_users = set(new_users)
