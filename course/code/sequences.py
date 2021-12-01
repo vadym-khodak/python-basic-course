@@ -82,6 +82,34 @@ print(numbers[:5])  # надрукує частину списку [1, 2, 3, 4, 
 # від кінця списку до початку з кроком -1
 print(numbers[-1::-1])  # надрукує частину рядка "niarb s'neM"
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Переглянути усі атрибути типу list
 print(dir(list))
 print(dir([]))
@@ -92,24 +120,330 @@ print(help(list))
 print(help([]))
 print(help(names))
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Робота з методами типу list
 # Порахувати кількість елементів "l"
 print(new_chars.count("l"))
 # Знайти індекс першої літери "l" з ліва направо
 print(new_chars.index("l"))
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Додавання елементу у кінець списку
+print(names)
+names.append("jason")
+print(names)
+
+# Додавання елементу у вказану позицію
+print(names)
+names.insert(2, "max")
+print(names)
+
+# Заміна елемента у списку
+print(names)
+names[1] = "brian"
+print(names)
+
+# Видалення елементу зі списку
+names.remove("brian")
+print(names)
+
+# Видалення та повернення елементу зі списку
+name = names.pop(3)
+print(names)
+print(name)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Поєднання списків методом додавання
-chars = chars + new_chars
+sum_chars = chars + new_chars
+print(sum_chars)
+# Розширення існуючого списку
+chars.extend(new_chars)
 print(chars)
 
 
-# tuple
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Сортування списку
+names.sort()
+print(names)
+
+# Сортування від більшого до меншого
+names.sort(reverse=True)
+print(names)
+
+names.reverse()
+print(names)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Створення неглибокої копії списку
+additional_names = ["joey", "bred"]
+names.append(additional_names)
+copied_names = names.copy()
+print(copied_names)
+print(id(names))
+print(id(copied_names))
+print(id(copied_names[-1]))
+print(id(additional_names))
+
+additional_names.append("jeremy")
+print(additional_names)
+print(copied_names[-1])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Очищення списку
+names.clear()
+print(names)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Робота із вкладеними списками
+
+matrix = [
+    [1, 3, 4],
+    [4, 5, 6],
+    [7, 8, 9],
+]
+
+print(matrix)
+
+print(matrix[0][0])
+print(matrix[1][1])
+print(matrix[2][0])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# tuple - кортеж, незмінювана послідовність об'єктів
+# Ініціалізація змінних типу tuple
 user_statuses = ("active", "inactive", "pending")
 new_user_statuses = "active", "inactive", "pending"
 statuses = ["active", "inactive", "pending"]
 new_statuses = tuple(statuses)
+new_chars = tuple(new_chars)
+print(statuses)
+print(new_statuses)
 
-# set
-users = {"bob", "bill", "max"}
-users_new = ["bob", "bill", "max", "bob"]
-unique_users = set(new_users)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Переглянути усі атрибути типу tuple
+print(dir(tuple))
+print(dir(()))
+print(dir(new_statuses))
+
+# Переглянути довідку по типу tuple
+print(help(tuple))
+print(help(()))
+print(help(new_statuses))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Робота з методами типу tuple
+# Порахувати кількість елементів "l"
+print(new_chars.count("l"))
+# Знайти індекс першої літери "l" з ліва направо
+print(new_chars.index("l"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if __name__ == "__main__":
+    pass
