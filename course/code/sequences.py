@@ -1,4 +1,4 @@
-# list - рядок, послідовність символів
+# list - список, послідовність елементів
 
 # Ініціалізація змінних типу list
 names = ["john", "rob", "bill"]
@@ -7,56 +7,13 @@ new_chars = ['h', 'e', 'l', 'l', 'o']
 new_users = []
 numbers = list(range(1, 11))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Перевірка типу
 print(type(names))
 # Перевірка змінної типу list
 print("rob" in names)
 print(chars == new_chars)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(len(names))
 
 # Отримання довжини списку
 print(len(names))
@@ -66,7 +23,6 @@ print(len(names))
 print(names[0])  # надрукує рядок "john"
 
 # останнього
-print(names[0])  # надрукує рядок "john"
 print(names[-1])  # надрукує рядок "bill"
 
 # Отримання зрізу списку (елементи з індексом від 1 включно до 5 виключно)
@@ -78,37 +34,9 @@ print(numbers[6:-1])  # надрукує частину списку (зріз) 
 # від елементу з індексом 0 до 5 виключно
 print(numbers[:5])  # надрукує частину списку (зріз) [1, 2, 3, 4, 5]
 # від початку списку до кінця з кроком 2 (0, 2, 4, 6, 8, 10)
-print(numbers[:5])  # надрукує частину списку [1, 2, 3, 4, 5]
+print(numbers[:5:2])  # надрукує частину списку
 # від кінця списку до початку з кроком -1
-print(numbers[-1::-1])  # надрукує частину рядка "niarb s'neM"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(numbers[-1::-1])  #
 
 # Переглянути усі атрибути типу list
 print(dir(list))
@@ -116,64 +44,15 @@ print(dir([]))
 print(dir(names))
 
 # Переглянути довідку по типу list
-print(help(list))
+print(help(list.append))
 print(help([]))
 print(help(names))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Робота з методами типу list
 # Порахувати кількість елементів "l"
 print(new_chars.count("l"))
 # Знайти індекс першої літери "l" з ліва направо
-print(new_chars.index("l"))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(new_chars.index("lay"))
 
 # Додавання елементу у кінець списку
 print(names)
@@ -200,49 +79,12 @@ print(names)
 print(name)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Поєднання списків методом додавання
 sum_chars = chars + new_chars
 print(sum_chars)
 # Розширення існуючого списку
 chars.extend(new_chars)
 print(chars)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Сортування списку
 names.sort()
@@ -252,30 +94,16 @@ print(names)
 names.sort(reverse=True)
 print(names)
 
-names.reverse()
-print(names)
+sorted_chars = sorted(chars)
+print(sorted_chars)
+print(chars)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+new_chars.reverse()
+print(new_chars)
 
 # Створення неглибокої копії списку
 additional_names = ["joey", "bred"]
+another_names = additional_names
 names.append(additional_names)
 copied_names = names.copy()
 print(copied_names)
@@ -287,80 +115,27 @@ print(id(additional_names))
 additional_names.append("jeremy")
 print(additional_names)
 print(copied_names[-1])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(another_names)
 
 # Очищення списку
 names.clear()
 print(names)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Робота із вкладеними списками
 
 matrix = [
-    [1, 3, 4],
+    [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9],
 ]
+matrix_2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 print(matrix)
 
+print(matrix[0])
 print(matrix[0][0])
 print(matrix[1][1])
 print(matrix[2][0])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # tuple - кортеж, незмінювана послідовність об'єктів
@@ -370,25 +145,10 @@ new_user_statuses = "active", "inactive", "pending"
 statuses = ["active", "inactive", "pending"]
 new_statuses = tuple(statuses)
 new_chars = tuple(new_chars)
+empty = ()
+empty_2 = tuple()
 print(statuses)
 print(new_statuses)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Переглянути усі атрибути типу tuple
 print(dir(tuple))
@@ -400,49 +160,11 @@ print(help(tuple))
 print(help(()))
 print(help(new_statuses))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Робота з методами типу tuple
 # Порахувати кількість елементів "l"
 print(new_chars.count("l"))
 # Знайти індекс першої літери "l" з ліва направо
 print(new_chars.index("l"))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 if __name__ == "__main__":
