@@ -13,16 +13,16 @@
 має значення `False`.
 
 Скорочена схема умовного оператора:
-
     ![short condition](images/short_condition.jpeg)
+    
 ```python
 if <умова>:
     <виконати цю логіку>
 ```
 
 Повна схема умовного оператора:
-
     ![full condition](images/full_condition.jpeg)
+    
 ```python
 if <умова>:
     <виконати цю логіку>
