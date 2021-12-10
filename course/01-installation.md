@@ -7,6 +7,7 @@
   - натиснути`Command + Space`
   - у полі пошуку ввести `Terminal`
   - вибрати зі списку `Terminal`
+
   ![Find Terminal](images/find_terminal.png)
 
 - встановлення `brew`
