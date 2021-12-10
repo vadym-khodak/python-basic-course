@@ -40,6 +40,7 @@ else:
 - коли число негативне
     ![Scratch Negative](images/negative_scratch.png)
 - коли число дорівнює "0"
+
     ![Scratch Zero](images/zero_scratch.png)
 
 Розглянемо блок-схему цієї програми:
