@@ -13,6 +13,7 @@
 має значення `False`.
 
 Скорочена схема умовного оператора:
+
     ![short condition](images/short_condition.jpeg)
 ```python
 if <умова>:
@@ -20,6 +21,7 @@ if <умова>:
 ```
 
 Повна схема умовного оператора:
+
     ![full condition](images/full_condition.jpeg)
 ```python
 if <умова>:
@@ -36,14 +38,18 @@ else:
 
 Ось приклади роботи такої програми у Scratch:
 - коли число позитивне
+
     ![Scratch Positive](images/positive_scratch.png)
 - коли число негативне
+
     ![Scratch Negative](images/negative_scratch.png)
 - коли число дорівнює "0"
 
     ![Scratch Zero](images/zero_scratch.png)
 
+
 Розглянемо блок-схему цієї програми:
+
     ![Diagram](images/diagram.jpg)
 
 Ця програма написана мовою Python:
