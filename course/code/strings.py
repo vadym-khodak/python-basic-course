@@ -120,7 +120,7 @@ print("Hello %s %s %d" % ("World!", "HI", 5678))  # python2
 print("Hello {1} {0}".format("Doe", "John"))
 print("Hello {first_name} {last_name}".format(last_name="Doe", first_name="John!"))
 name = "John!"
-print(f"Hello {name + ' ' + 'Doe'}")
+print(f"Hello {name}")
 print(r"hello\nworld")
 
 # Розділення рядків
