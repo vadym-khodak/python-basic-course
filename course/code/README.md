@@ -8,4 +8,6 @@
     - [Словники](/course/code/dictionaries.py)
 3. [Умови](/course/code/conditions.py)
 4. [Цикли](/course/code/loops.py)
-5. [Функції](/course/code/functions.py)
+5. [Функції]:
+    - [Базовий рівень](/course/code/functions.py)
+    - [Просунутий рівень](/course/code/functions_advance.py)
