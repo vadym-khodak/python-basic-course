@@ -1,3 +1,7 @@
+"""
+Документація ChromeDriver: https://chromedriver.chromium.org/getting-started
+"""
+
 import time
 from unittest import TestCase
 
@@ -20,17 +24,17 @@ class TestForm(TestCase):
         # GIVEN Selenium Chrome web driver of index page
         self.driver.get("http://127.0.0.1:5000")
         # WHEN set value "Vadym Khodak" for element with id "name"
-        time.sleep(1)
+        time.sleep(2)
         elem = self.driver.find_element("id", "name")
         elem.send_keys("Vadym Khodak")
         # WHEN click on button "generate"
-        time.sleep(1)
+        time.sleep(2)
         generate = self.driver.find_element("id", "generate")
         generate.click()
-        # THEN value of element with id "email" equals "vadym.khodak@datarobot.com"
+        # THEN value of element with id "email" equals "vadym.khodak@email.com"
         email = self.driver.find_element("id", "email")
-        assert email.get_attribute("value") == "vadym.khodak@datarobot.com"
-        time.sleep(1)
+        assert email.get_attribute("value") == "vadym.khodak@email.com"
+        time.sleep(2)
 
 
 if __name__ == "__main__":

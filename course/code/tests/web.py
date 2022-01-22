@@ -1,3 +1,7 @@
+"""
+Документація Flask: https://flask.palletsprojects.com/en/2.0.x/
+"""
+
 from flask import Flask, render_template
 
 app = Flask(__name__)

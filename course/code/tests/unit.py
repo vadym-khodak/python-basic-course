@@ -1,9 +1,21 @@
+"""
+Запуск unittest: python -m unittest tests/unit/test_greeting_unittest.py -v
+Запуск unittest для однієї тестової функції: python -m unittest tests/unit/test_greeting_unittest.py::test_greeting_with_name_check_title
+Module unittest documentation: https://docs.pytest.org/en/6.2.x/contents.html
+Video example: https://youtu.be/6tNS--WetLI
+
+Запуск pytest: python -m pytest tests/unit/test_greeting_pytest.py -v
+Запуск pytest однієї тестової функції: python -m pytest tests/unit/test_greeting_pytest.py::test_greeting_with_name_check_title
+Library pytest documentation: https://docs.pytest.org/en/6.2.x/contents.html
+
+"""
+
 import random
-from unittest import TestCase, mock
+from unittest import TestCase
 
 import pytest
 
-from .main import check_number
+from course.code.tests.main import check_number
 
 
 def test_check_number_positive():
@@ -12,7 +24,7 @@ def test_check_number_positive():
     # WHEN call `check_number` function with the positive number
     result = check_number(num)
     # THEN the result equals "positive"
-    assert result == "positive"
+    assert result == "positive", "This is not positive number"
 
 
 def test_check_number_negative():
@@ -42,36 +54,35 @@ def test_check_number_zero():
     ]
 )
 def test_check_number_all(num, expected_value):
-    # GIVEN a positive number
-    # num = random.randint(1, 10000000)
-    # WHEN call `check_number` function with the positive number
-    with mock.patch("main.random.randint") as mocked_random:
-        result = check_number(num)
-        assert mocked_random.called
-        assert mocked_random.call_count == 2
-    # THEN the result equals "positive"
+    # GIVEN a number
+    # WHEN call `check_number` function with the number
+    result = check_number(num)
+    # THEN the result equals "positive", "negative", or "zero"
     assert result == expected_value
 
 
 class TestCheckNumber(TestCase):
     @classmethod
     def setUpClass(cls) -> None:
+        """This function will be run before all test methods"""
         cls.positive = random.randint(1, 10000000)
         with open("../test.txt", "w") as f:
             f.write(f"Prepared data for testing {cls.positive}")
 
     @classmethod
     def tearDownClass(cls) -> None:
-        """This function will be run before before all test methods"""
+        """This function will be run after all test methods"""
         del cls.positive
         with open("../test.txt", "w") as f:
             f.write("Deleted data for testing")
 
     def setUp(self) -> None:
         """This function will be run before each all test methods"""
+        print("SetUp")
 
     def tearDown(self) -> None:
         """This function will be run after each test method"""
+        print("tearDown")
 
     def test_check_number_positive(self):
         # GIVEN a positive number

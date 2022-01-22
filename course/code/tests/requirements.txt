@@ -1,3 +1,5 @@
+# Встановлення усіх бібліотек із файлу requirements.txt
+# pip install -r course/code/tests/requirements.txt
 flask
 pytest
 selenium
