@@ -11,7 +11,7 @@ for number in numbers_iterator:
     print(number)
 
 
-# Написання класу ітератора (методи __iter__ та __next__ обовєязкові)
+# Написання класу ітератора (методи __iter__ та __next__ обов'язкові)
 class FileReader:
     def __init__(self, file_name, lines_in_chunk=2):
         self.file_name = file_name
