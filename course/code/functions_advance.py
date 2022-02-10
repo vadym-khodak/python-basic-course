@@ -3,6 +3,7 @@
 def hello()  # Синтаксична помилка - відсутнє ":"
     print("Hello")
 
+
 hello()
 
 x, y = 1, 3
@@ -168,31 +169,33 @@ print(avg("1", 2, 3, 4, 5))
 
 # Функція 3 * x * x + 5
 def f(x):
-    return 3 * x ** 2 + 5
+    return 3 * x**2 + 5
 
 
 print(f(2))
 
 
-def f(x): return 3 * x ** 2 + 5
+def f(x):
+    return 3 * x**2 + 5
 
 
 print(f(2))
 
 
 # Анонімна lambda функція рівняння 3 * x * x + 5 = 0
-f = lambda x: 3 * x ** 2 + 5
+f = lambda x: 3 * x**2 + 5
 
 
 print(f(2))
 
-print((lambda x: 3 * x ** 2 + 5)(2))
+print((lambda x: 3 * x**2 + 5)(2))
 
 
 # Функція квадратного рівняння
 def square_equation(a, b, c):
     def f(x):
-        return a * x ** 2 + b * x + c
+        return a * x**2 + b * x + c
+
     return f
 
 
@@ -205,7 +208,7 @@ print(f(-1))
 
 # Функція квадратного рівняння з використанням lambda
 def square_equation(a, b, c):
-    return lambda x: a * x ** 2 + b * x + c
+    return lambda x: a * x**2 + b * x + c
 
 
 f = square_equation(2, 3, 5)
@@ -369,10 +372,7 @@ user = {
     },
     "status": "active",
     "role": "admin",
-    "address": {
-        "country": "Ukraine",
-        "city": "Khmelnytskyi"
-    }
+    "address": {"country": "Ukraine", "city": "Khmelnytskyi"},
 }
 
 user_template = {

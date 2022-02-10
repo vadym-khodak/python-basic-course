@@ -51,7 +51,7 @@ def test_check_number_zero():
         (1, "positive"),
         (-1, "negative"),
         (0, "zero"),
-    ]
+    ],
 )
 def test_check_number_all(num, expected_value):
     # GIVEN a number

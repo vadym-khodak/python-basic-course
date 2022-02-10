@@ -32,4 +32,5 @@ def check_number(number: int) -> NumberEnum:
 
 if __name__ == "__main__":
     import doctest
+
     doctest.testmod(verbose=True)

@@ -82,12 +82,7 @@ result = bool(empty_str) or bool(some_str)
 print(result)
 
 
-if (
-        int_zero or float_zero or complex_zero
-        or empty_str or empty_list or empty_tuple or empty_set
-        or empty_dict
-        or none
-):
+if int_zero or float_zero or complex_zero or empty_str or empty_list or empty_tuple or empty_set or empty_dict or none:
     print(True)
 else:
     print(False)

@@ -8,12 +8,12 @@ Dear friend.        I hope you are doing well.
 Warm regards,
 Your friend
 """
-message_4 = '''
+message_4 = """
 Dear friend,
 I hope you are doing well.
 Warm regards,
 Your friend
-'''
+"""
 
 # Перевірка типу
 print(type(message_1))
@@ -93,7 +93,7 @@ print("khodak" in "vadym.khodak@gmail.com")  # True
 print("   vadym.khodak@gmail.com   " == "vadym.khodak@gmail.com")  # False
 
 # Видалення пробільних символів
-print("   vadym.khodak@gmail.com   ".strip())   # "vadym.khodak@gmail.com"
+print("   vadym.khodak@gmail.com   ".strip())  # "vadym.khodak@gmail.com"
 print("   vadym.khodak@gmail.com   ".rstrip())  # "   vadym.khodak@gmail.com"
 print("   vadym.khodak@gmail.com   ".lstrip())  # "vadym.khodak@gmail.com   "
 

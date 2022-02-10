@@ -3,7 +3,7 @@
 # Ініціалізація змінних типу list
 names = ["john", "rob", "bill"]
 chars = list("hello")
-new_chars = ['h', 'e', 'l', 'l', 'o']
+new_chars = ["h", "e", "l", "l", "o"]
 new_users = []
 numbers = list(range(1, 11))
 

@@ -11,7 +11,9 @@ def my_decorator(fn):
         print("Do something before the main function")
         fn()
         print("Do something after the main function")
+
     return wrapper
+
 
 # Декорування функці декоратором за допомогу передавання функції як аргумент функції-декоратора
 decorated_fn = my_decorator(greeting)
@@ -42,17 +44,17 @@ def store_analytic_data(fn):
         with open("logs.txt", "a") as f:
             f.write(
                 "{} \t User {} called function \t{} \n".format(
-                    datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-                    session['user_name'],
-                    fn.__name__
+                    datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), session["user_name"], fn.__name__
                 )
             )
+
     return wrapper
 
 
 @store_analytic_data
 def another_greeting():
     print("hello group")
+
 
 # Використання одного декоратора для декорування функції
 @store_analytic_data
@@ -104,6 +106,7 @@ def check_role(role="admin", is_raise_exception=False):
             print(f"User called this function")
 
         return wrapper
+
     return inner
 
 
@@ -124,6 +127,7 @@ greeting()
 def error_handling(fn):
     def wrapper(*args, **kwargs):
         fn(*args, **kwargs)
+
     return wrapper
 
 

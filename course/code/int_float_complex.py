@@ -23,8 +23,8 @@ print(a // b)
 # Отримання остачі від ділення
 print(a % b)
 # Зведення в ступінь
-print(a ** 2)
-print(b ** a)
+print(a**2)
+print(b**a)
 print(pow(b, a))
 # Отримання модулю
 print(abs(c))
@@ -41,15 +41,15 @@ print(i)
 # Ініціалізація змінних типу float
 x = 1.75
 y = -0.5
-z = 3.
+z = 3.0
 
 # Перевірка типу
 print(type(x) != float)
 print(type(z))
 
 print(z - 1)
-print(0.)
-print(.0)
+print(0.0)
+print(0.0)
 
 # float - приблизне число
 print(0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1)
@@ -77,7 +77,7 @@ print(h + g)
 print(h - g)
 print(h * g)
 print(h / g)
-print(h ** g)
+print(h**g)
 print(abs(h))
 
 # Перевірка рівняння чисел типу complex

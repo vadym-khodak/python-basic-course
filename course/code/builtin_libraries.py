@@ -43,17 +43,20 @@ another_test_function("Vadym")
 
 # Імпортування змінної/константи
 from test_package.test_module import TEST_CONSTANT, test_variable
+
 print(TEST_CONSTANT)
 print(test_variable)
 
 
 # Імпортування всього
 from test_package.test_module import test_function
+
 print(test_function)
 test_function()
 test_function("Vadym")
 
 from test_package.another_test_module import *
+
 print(test_function)
 test_function()
 test_function("Vadym")

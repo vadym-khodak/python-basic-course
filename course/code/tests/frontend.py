@@ -13,8 +13,10 @@ class TestForm(TestCase):
     or
     echo 'export PATH=$PATH:<path-to-your-chromedriver>' >> ~/.zshrc
     """
+
     def setUp(self) -> None:
         from selenium import webdriver
+
         self.driver = webdriver.Chrome("/Users/vadymkhodak/chromedriver")
 
     def tearDown(self) -> None:

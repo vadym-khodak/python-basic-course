@@ -85,4 +85,3 @@ if __name__ == "__main__":
     print(time() - start)
 
     # assert bubble_sorted == insertion_sorted == sorted_list
-

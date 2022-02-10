@@ -30,11 +30,11 @@ class FileReader:
                     return chunk
                 self.file.close()
                 raise StopIteration
-            chunk.append(line.replace("\n", ''))
+            chunk.append(line.replace("\n", ""))
         return chunk
 
 
-file_reader_iterator = FileReader('temp.txt', 2)
+file_reader_iterator = FileReader("temp.txt", 2)
 print(file_reader_iterator)
 print(next(file_reader_iterator))
 

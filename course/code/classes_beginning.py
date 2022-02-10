@@ -31,7 +31,7 @@ def print_name_id(self):
     print(f"({self.id}) {self.name}")
 
 
-setattr(Unit, 'print_name_id', print_name_id)
+setattr(Unit, "print_name_id", print_name_id)
 
 
 first_unit.print_name_id()
@@ -58,7 +58,6 @@ another_unit.print_name_id()
 
 # Доступ до атрибутів класу
 class Animal:
-
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -73,7 +72,6 @@ print(cat.name, cat.age)
 
 # # Методи класу та доступ до них
 class Employee:
-
     def __init__(self, name, job_title, salary):
         self.name = name
         self.job_title = job_title
@@ -157,7 +155,6 @@ class User(Person):
 
 
 class Teacher(User):
-
     def teacher_method(self):
         print("It is a method of Teacher class", self.name)
 

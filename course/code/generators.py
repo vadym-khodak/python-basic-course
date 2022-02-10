@@ -39,6 +39,7 @@ for name in names_generator:
 # Нескінченний генератор
 def generator_random_int(start=-1000, end=1000):
     import random
+
     while True:
         yield random.randint(start, end)
         print("After yield")
@@ -61,12 +62,12 @@ for i in gen:
 # Використання функції генератора для читання файлу частинами
 def get_chunk_of_lines(file_name: str, lines_in_chunk: int = 1):
     chunk = []
-    with open(file_name, 'r') as f:
+    with open(file_name, "r") as f:
         while True:
             line = f.readline()
             if not line:
                 break
-            chunk.append(line.replace("\n", ''))
+            chunk.append(line.replace("\n", ""))
             if len(chunk) == lines_in_chunk:
                 yield chunk
                 chunk = []
@@ -74,7 +75,7 @@ def get_chunk_of_lines(file_name: str, lines_in_chunk: int = 1):
             yield chunk
 
 
-gen = get_chunk_of_lines('temp.txt', 2)
+gen = get_chunk_of_lines("temp.txt", 2)
 for i in gen:
     print(i)
 

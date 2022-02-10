@@ -2,7 +2,7 @@
 import random
 
 numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
-result = list(map(lambda x: x ** 2, numbers))
+result = list(map(lambda x: x**2, numbers))
 print(result)
 
 
@@ -10,13 +10,13 @@ print(result)
 numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 result = []
 for num in numbers:
-    result.append(num ** 2)
+    result.append(num**2)
 print(result)
 
 
 # Зведення у другу ступінь кожного числа з послідовності за допомого list comprehension
 numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
-result = [num ** 2 for num in numbers]
+result = [num**2 for num in numbers]
 print(result)
 
 
@@ -33,14 +33,15 @@ for num in numbers:
 print(filtered_numbers)
 
 # Фільтрування послідовності чисел для отримання тільки парних чисел за допомогою list comprehension з умовою if
-filtered_numbers = [num ** 2 for num in numbers if num % 2 == 0]
+filtered_numbers = [num**2 for num in numbers if num % 2 == 0]
 print(filtered_numbers)
 
 
 # Отримання суми квадратів парних чисел пурших десяти чисел з послідовності Фібоначчі за допомогою функції reduce()
 from functools import reduce
+
 numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
-result = reduce(lambda x, y: x + y, map(lambda x: x ** 2, filter(lambda x: x % 2 == 0, numbers)))
+result = reduce(lambda x, y: x + y, map(lambda x: x**2, filter(lambda x: x % 2 == 0, numbers)))
 print(result)
 
 # Отримання суми квадратів парних чисел пурших десяти чисел з послідовності Фібоначчі за допомогою циклу for
@@ -48,13 +49,13 @@ numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 result = []
 for num in numbers:
     if num % 2 == 0:
-        result.append(num ** 2)
+        result.append(num**2)
 result = sum(result)
 print(result)
 
 # Отримання суми квадратів парних чисел пурших десяти чисел з послідовності Фібоначчі за допомогою list comprehension
 numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
-result = sum(num ** 2 for num in numbers if num % 2 == 0)
+result = sum(num**2 for num in numbers if num % 2 == 0)
 print(result)
 
 
@@ -119,7 +120,6 @@ for person in people:
 start = time()
 print(person_by_id.get(99567))
 print(time() - start)
-
 
 
 # Домашнє завдання

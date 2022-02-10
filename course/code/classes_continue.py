@@ -1,7 +1,7 @@
 # Magic/Dunder methods
 
-class Employee:
 
+class Employee:
     def __init__(self, name, job_title, salary):
         self.name = name
         self.job_title = job_title
@@ -168,6 +168,7 @@ from abc import ABC, abstractmethod
 
 class Animal(ABC):
     """This is an Animal class"""
+
     def __init__(self, name):
         self.name = name
 
@@ -181,6 +182,7 @@ class Animal(ABC):
 
 class Dog(Animal):
     """This is a Dog class"""
+
     def say(self, phrase=None):
         if not phrase:
             print("woof")
@@ -190,6 +192,7 @@ class Dog(Animal):
 
 class Cat(Animal):
     """This is a Cat class"""
+
     def say(self, phrase=None):
         if not phrase:
             print("purr")

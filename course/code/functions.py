@@ -97,10 +97,7 @@ def greet_person(name, part_of_day="day"):
     return full_phrase
 
 
-phrase = greet_person(
-    "Max",
-    part_of_day="morning"
-)
+phrase = greet_person("Max", part_of_day="morning")
 print(phrase)
 
 phrase = greet_person("Rob")
@@ -109,26 +106,26 @@ print(phrase)
 
 # Виклик функцій в середені інших функцій
 def a():
-    print('a() starts')
+    print("a() starts")
     b()
     d()
-    print('a() returns')
+    print("a() returns")
 
 
 def b():
-    print('b() starts')
+    print("b() starts")
     c()
-    print('b() returns')
+    print("b() returns")
 
 
 def c():
-    print('c() starts')
-    print('c() returns')
+    print("c() starts")
+    print("c() returns")
 
 
 def d():
-    print('d() starts')
-    print('d() returns')
+    print("d() starts")
+    print("d() returns")
 
 
 a()
@@ -139,6 +136,7 @@ a()
 def multiply(number):
     multiplier = 3
     return number * multiplier
+
 
 print(multiply(4))
 # print(multiplier)  # Цей код видасть помилку
@@ -182,20 +180,20 @@ print(id(conn))
 
 # Локальні та глобальні змінні з однаковим ім'ям
 def spam():
-    eggs = 'spam local'
-    print(eggs)    # prints 'spam local'
+    eggs = "spam local"
+    print(eggs)  # prints 'spam local'
 
 
 def bacon():
-    eggs = 'bacon local'
-    print(eggs)    # prints 'bacon local'
+    eggs = "bacon local"
+    print(eggs)  # prints 'bacon local'
     spam()
-    print(eggs)    # prints 'bacon local'
+    print(eggs)  # prints 'bacon local'
 
 
-eggs = 'global'
+eggs = "global"
 bacon()
-print(eggs)        # prints 'global'
+print(eggs)  # prints 'global'
 
 
 # args and kwargs

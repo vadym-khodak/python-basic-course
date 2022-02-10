@@ -92,6 +92,7 @@ def generate_numbers(with_bool=False):
 
     return _numbers
 
+
 print(generate_numbers())
 print(generate_numbers(with_bool=True))
 
