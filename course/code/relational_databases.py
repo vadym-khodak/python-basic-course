@@ -1,6 +1,6 @@
-# Робота з реляційними даними
+# Робота з реляційними базами даними
 
-# Робота за базаю даних SQLite3
+# Робота за базою даних SQLite3
 import sqlite3  # https://docs.python.org/3/library/sqlite3.html
 
 connector = sqlite3.connect("db.sqlite3")
